@@ -38,32 +38,28 @@ const CssTextField = withStyles({
   })(TextField);
 
 
-export const TextfielCode =() => {
-    return (
-        <CssTextField  label="Código de la  sección" variant="outlined" defaultValue="04"/>
-    )
-}
-export const TextfielName =() => {
-  const [value, setValue] = React.useState(NameT);
+
+export const TextfielDescription = (props) => {
+
+  const { keys, setInfo, info } = props
 
   const handleChange = (event) => {
-    setValue(event.target.value);
-  };
+    setInfo({
+      ...info,
+      [event.target.name]: event.target.valu
+   });
+  }
     return (
-        <CssTextField multiline
-        value={value}
-        onChange={handleChange} label="Nombre de la  sección" variant="outlined" />
-    )
-}
-export const TextfielDescription =() => {
-  const [value, setValue] = React.useState(DescriptionT);
-
-  const handleChange = (event) => {
-    setValue(event.target.value);
-  };
-    return (
-        <CssTextField multiline
-        value={value}
-        onChange={handleChange} label="Descripción de la  sección" variant="outlined" />
+        <>
+          {keys ? keys.map((key) => (
+            <CssTextField multiline
+              value={info.name}
+              name={key.name}
+              onChange={handleChange} 
+              label={key.label } 
+              variant="outlined"
+            />
+          )) : ''}
+        </>
     )
 }

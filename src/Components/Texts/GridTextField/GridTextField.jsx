@@ -1,6 +1,11 @@
 import React from 'react';
 import { Grid, withStyles } from '@material-ui/core';
-import { TextfielCode, TextfielDescription, TextfielName } from '../TextFieldCode/TextfieldCode';
+import { 
+    // TextfielCode, 
+    TextfielDescription, 
+    // TextfielName,
+} 
+from '../TextFieldCode/TextfieldCode';
 
 const GridField = withStyles({
     root: {
@@ -16,10 +21,10 @@ export const GridTextField = () => {
     return (
         <GridField container alignItems="center" direction={"column"} spacing={1}>
             <Grid item>
-                <TextfielCode/>
+                {/* <TextfielCode/> */}
             </Grid>
             <Grid item>
-                <TextfielName/>
+                {/* <TextfielName/> */}
             </Grid>
             <Grid item>
                 <TextfielDescription/>
