@@ -1,0 +1,19 @@
+.editTitle{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0%;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.015em;
+    text-align: left;
+}
+.editIconContainer {
+    border-bottom: 3px solid #94B43B;
+}
+.editIcon{
+    color:#94B43B;
+    margin-left: 5px;
+    margin-bottom: -6px;
+}
